@@ -1,0 +1,281 @@
+#slideshow {
+  text-align: center;
+}
+.cb-slideshow li span {
+  width: 33%;
+}
+.cb-slideshow li div {
+  color: #fff;
+}
+/* Try a different transition for the 3rd slide. */
+.cb-slideshow li:nth-child(3) div {
+  bottom: 300px;
+  -webkit-animation-name: titleAnimationA;
+}
+
+.cb-slideshow,
+.cb-slideshow:after {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0px;
+    left: 33%;
+    z-index: 0;
+}
+div.project-info {
+  display: table;
+  width: 33%;
+  height: 100%;
+  position: absolute;
+  top: 0px;
+  left: 0;
+  background-size: cover;
+  background-position: 50% 50%;
+  background-repeat: none;
+  z-index: 0;
+}
+
+div.project-info div.inner {
+  background: rgba(250, 250, 250, .9);;
+  display: table-cell;
+  vertical-align: middle;
+}
+.project-info h2 {
+  font-size: 60px;
+  line-height: 55px;
+}
+.project-info p.location {
+  color: #333;
+  font-size: 30px;
+  padding-top: 30px;
+}
+.project-info p.result {
+  color: #275778;
+  font-size: 40px;
+  padding-left:30px;
+  padding-right: 30px;
+  padding-top: 30px;
+}
+div.project-testimonial,
+div.project-awards {
+  display: table;
+  width: 33%;
+  height: 100%;
+  position: absolute;
+  top: 0px;
+  left: 66%;
+  background-size: cover;
+  background-position: 50% 50%;
+  background-repeat: none;
+  z-index: 0;
+}
+#slideshow div.project-testimonial div.inner {
+  display: table-cell;
+  font-family: DINNextLTPro-Bold;
+  vertical-align: middle;
+  padding-left: 50px;
+  padding-right: 50px;
+}
+.project-testimonial h2 {
+  color: #275778;
+  font-size: 60px;
+}
+.project-testimonial p.quote {
+  padding-top: 40px;
+  font-size: 40px;
+}
+.project-testimonial p.source {
+  color: white;
+  font-size: 30px;
+  padding-top: 30px;
+}
+/* Animation for the slideshow images */
+@-webkit-keyframes imageAnimationOne {
+  0% {
+    opacity: 1;
+  }
+  50% { opacity: 1 }
+  100% { opacity: 1 }
+}
+@-webkit-keyframes imageAnimationFour {
+  0% {
+    opacity: 0;
+    -webkit-animation-timing-function: ease-in;
+  }
+  12% {
+    opacity: 1;
+    -webkit-animation-timing-function: ease-out;
+  }
+  25% { opacity: 1 }
+  37% { opacity: 0 }
+  100% { opacity: 0 }
+}
+@-webkit-keyframes imageAnimationFive {
+  0% {
+    opacity: 0;
+    -webkit-animation-timing-function: ease-in;
+  }
+  10% {
+    opacity: 1;
+    -webkit-animation-timing-function: ease-out;
+  }
+  20% { opacity: 1 }
+  30% { opacity: 0 }
+  100% { opacity: 0 }
+}
+@-webkit-keyframes imageAnimationSix {
+  0% {
+    opacity: 0;
+    -webkit-animation-timing-function: ease-in;
+  }
+  8% {
+    opacity: 1;
+    -webkit-animation-timing-function: ease-out;
+  }
+  17% { opacity: 1 }
+  25% { opacity: 0 }
+  100% { opacity: 0 }
+}
+@-webkit-keyframes imageAnimationEight {
+  0% {
+    opacity: 0;
+    -webkit-animation-timing-function: ease-in;
+  }
+  6% {
+    opacity: 1;
+    -webkit-animation-timing-function: ease-out;
+  }
+  13% { opacity: 1 }
+  19% { opacity: 0 }
+  100% { opacity: 0 }
+}
+@-webkit-keyframes imageAnimationTen {
+  0% {
+    opacity: 0;
+    -webkit-animation-timing-function: ease-in;
+  }
+  5% {
+    opacity: 1;
+    -webkit-animation-timing-function: ease-out;
+  }
+  10% { opacity: 1 }
+  15% { opacity: 0 }
+  100% { opacity: 0 }
+}
+@-webkit-keyframes imageAnimationTwelve {
+  0% {
+    opacity: 0;
+    -webkit-animation-timing-function: ease-in;
+  }
+  4% {
+    opacity: 1;
+    -webkit-animation-timing-function: ease-out;
+  }
+  8% { opacity: 1 }
+  12% { opacity: 0 }
+  100% { opacity: 0 }
+}
+@-webkit-keyframes imageAnimationFifteen {
+  0% {
+    opacity: 0;
+    -webkit-animation-timing-function: ease-in;
+  }
+  3% {
+    opacity: 1;
+    -webkit-animation-timing-function: ease-out;
+  }
+  7% { opacity: 1 }
+  10% { opacity: 0 }
+  100% { opacity: 0 }
+}
+@-webkit-keyframes imageAnimationFirst {
+  0% {
+    opacity: 1;
+  }
+  5% {
+    opacity: 1;
+    -webkit-animation-timing-function: ease-out;
+  }
+  10% { opacity: 1 }
+  25% { opacity: 0 }
+  100% { opacity: 0 }
+}
+@-webkit-keyframes imageAnimationLast {
+  0% {
+    opacity: 0;
+    -webkit-animation-timing-function: ease-in;
+  }
+  5% {
+    opacity: 1;
+    -webkit-animation-timing-function: ease-out;
+  }
+  10% { opacity: 1 }
+  100% { opacity: 1 }
+}
+
+/* Animation for the title */
+@-webkit-keyframes titleAnimation {
+  0% {
+    opacity: 0;
+    -webkit-transform: translateY(200px);
+  }
+  8% {
+    opacity: 1;
+    -webkit-transform: translateY(0px);
+  }
+  17% { opacity: 1 }
+  19% { opacity: 0 }
+  100% { opacity: 0 }
+}
+
+@-webkit-keyframes titleAnimationA {
+  0% {
+    opacity: 0;
+    -webkit-transform: translateX(200px);
+  }
+  8% {
+    opacity: 1;
+    -webkit-transform: translateX(0px);
+  }
+  17% { opacity: 1 }
+  19% { opacity: 0 }
+  100% { opacity: 0 }
+}
+
+/*****************************************/
+/* Push reveal */
+/*****************************************/
+
+.fxPushReveal .navOutNext {
+  opacity: 1;
+  -webkit-animation: slideOutBottom 0.7s forwards ease-in-out;
+  animation: slideOutBottom 0.7s forwards ease-in-out;
+}
+
+.fxPushReveal .navInNext {
+  opacity: 1;
+  -webkit-animation: slideInHalfFromTop 0.7s forwards ease-in-out;
+  animation: slideInHalfFromTop 0.7s forwards ease-in-out;
+}
+
+@-webkit-keyframes slideOutBottom {
+  to {
+    -webkit-transform: translateY(100%);
+  }
+}
+
+@-webkit-keyframes slideInHalfFromTop {
+  from {
+    -webkit-transform: translateY(-50%);
+  }
+  to {
+    -webkit-transform: translateY(0);
+  }
+}
+
+@media screen and (max-width: 1140px) {
+  .cb-slideshow li div h3 { font-size: 140px }
+}
+@media screen and (max-width: 600px) {
+  .cb-slideshow li div h3 { font-size: 80px }
+}

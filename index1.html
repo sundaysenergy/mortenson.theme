@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<!--[if lt IE 7 ]> <html class="ie ie6 no-js" lang="en"> <![endif]-->
+<!--[if IE 7 ]>    <html class="ie ie7 no-js" lang="en"> <![endif]-->
+<!--[if IE 8 ]>    <html class="ie ie8 no-js" lang="en"> <![endif]-->
+<!--[if IE 9 ]>    <html class="ie ie9 no-js" lang="en"> <![endif]-->
+<!--[if gt IE 9]><!--><html class="no-js" lang="en"><!--<![endif]-->
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <title>Fullscreen Background Image Slideshow with CSS3</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="Fullscreen Background Image Slideshow with CSS3 - A Css-only fullscreen background image slideshow" />
+        <meta name="keywords" content="css3, css-only, fullscreen, background, slideshow, images, content" />
+        <meta name="author" content="Codrops" />
+        <link rel="shortcut icon" href="../favicon.ico">
+        <link rel="stylesheet" type="text/css" href="http://www.mortenson.com/Assets/css/main.min.css" />
+        <link rel="stylesheet" type="text/css" href="css/demo.css" />
+        <link rel="stylesheet" type="text/css" href="css/style1.css" />
+        <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/modernizr/2.7.1/modernizr.min.js"></script>
+    </head>
+    <body id="page">
+      <div id="slideshow">
+        <div class="slide active">
+        </div>
+        <div class="slide next">
+        </div>
+      </div>
+      <script id="slideshow-template" type="text/x-mustache-template">
+        <!-- // LISTING OF IMAGES -->
+        <ul class="cb-slideshow">
+        {{#images}}
+          <li>
+            <span style="background-image: url('http://www.mortenson.com{{source}}');
+              -webkit-animation: {{animation_name}} {{images_duration}}s linear 1;
+              animation: {{animation_name}} {{images_duration}}s linear 1;
+              -webkit-animation-delay: {{delay}}s;
+              animation-delay: {{delay}}s;
+            ">Image {{i}}</span>
+          </li>
+        {{/images}}
+        </ul>
+        <div class="project-info" style="background-image: url('{{img}}');">
+          <div class="inner">
+            <h2 class="name">{{name}}</h2>
+            <p class="location">{{location}}</p>
+            <p class="result">{{&result}}</p>
+            <ul>
+              {{#related}}
+                <li>{{.}}</li>
+              {{/related}}
+            </ul>
+          </div>
+        </div>
+        {{#testimonial}}
+          <div class="project-testimonial">
+            <div class="inner">
+              <h2>TESTIMONIAL</h2>
+              <p class="quote">{{testimonial}}</p>
+              <p class="source">{{testimonial_source}}</p>
+            </div>
+          </div>
+        {{/testimonial}}
+        <!--
+        // {{#awards}}
+        //   <div class="project-awards">
+        //     <p class="awards">{{awards}}</p>
+        //   </div>
+        // {{/awards}}
+        -->
+      </script>
+      <script src="//code.jquery.com/jquery.js" type="text/javascript"></script>
+      <script src="//cdnjs.cloudflare.com/ajax/libs/hogan.js/3.0.0/hogan.js" type="text/javascript"></script>
+      <script src="//cdnjs.cloudflare.com/ajax/libs/lodash.js/2.4.1/lodash.min.js" type="text/javascript"></script>
+      <script type="text/javascript" src="js/mortenson.js"></script>
+    </body>
+</html>
