@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<!--[if lt IE 7 ]> <html class="ie ie6 no-js" lang="en"> <![endif]-->
+<!--[if IE 7 ]>    <html class="ie ie7 no-js" lang="en"> <![endif]-->
+<!--[if IE 8 ]>    <html class="ie ie8 no-js" lang="en"> <![endif]-->
+<!--[if IE 9 ]>    <html class="ie ie9 no-js" lang="en"> <![endif]-->
+<!--[if gt IE 9]><!--><html class="no-js" lang="en"><!--<![endif]-->
+  <head>
+      <meta charset="UTF-8" />
+      <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+      <title>Fullscreen Background Image Slideshow with CSS3</title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="description" content="Fullscreen Background Image Slideshow with CSS3 - A Css-only fullscreen background image slideshow" />
+      <meta name="keywords" content="css3, css-only, fullscreen, background, slideshow, images, content" />
+      <link rel="shortcut icon" href="../favicon.ico">
+      <link rel="stylesheet" type="text/css" href="css/learn.css" />
+  </head>
+  <body id="page">
+    <div id="slideshow" class="fxSnapIn">
+      <div class="slide" id="sam">
+        <div class="screen project-info" style="background-image: url('{{img}}');">
+          <div class="inner">
+            <h2 class="name">{{name}}</h2>
+            <p class="location">{{location}}</p>
+            <p class="result">{{&result}}</p>
+            <ul>
+                <li>{{.}}</li>
+            </ul>
+          </div>
+        </div>
+
+        <ul class="screen cb-slideshow">
+          <li>
+            <span style="
+            ">Image {{i}}</span>
+          </li>
+        </ul>
+
+        <div class="screen project-testimonial">
+          <div class="inner">
+            <h2>TESTIMONIAL</h2>
+            <p class="quote">{{testimonial}}</p>
+            <p class="source">{{testimonial_source}}</p>
+          </div>
+        </div>
+      </div>
+      <div class="slide" id="rob">
+        <div class="screen project-info" style="background-image: url('{{img}}');">
+          <div class="inner">
+            <h2 class="name">name 2</h2>
+            <p class="location">location 2</p>
+            <p class="result">{{&result}}</p>
+            <ul>
+                <li>related</li>
+            </ul>
+          </div>
+        </div>
+
+        <ul class="screen cb-slideshow">
+          <li>
+            <span style="
+            ">asdf 2</span>
+          </li>
+        </ul>
+
+        <div class="screen project-testimonial">
+          <div class="inner">
+            <h2>TESTIMONIAL</h2>
+            <p class="quote">{{testimonial}} asdf asdf asdf asdf asdf </p>
+            <p class="source">{{testimonial_source}}asd asdf asdf asd fasdf  asdf</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </body>
+</html>

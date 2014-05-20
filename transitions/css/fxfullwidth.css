@@ -3,7 +3,9 @@
 /*****************************************/
 /* Soft Scale */
 /*****************************************/
-
+p {
+  position: relative;
+}
 .fxSoftScale .navOutNext {
 	-webkit-animation: scaleUp 1.5s forwards cubic-bezier(0.7, 0, 0.3, 1);
 	animation: scaleUp 1.5s forwards cubic-bezier(0.7, 0, 0.3, 1);
@@ -481,15 +483,15 @@
 /*****************************************/
 
 .fxSnapIn .navOutNext {
-	-webkit-animation: slideOutLeft 0.5s forwards ease-in;
-	animation: slideOutLeft 0.5s forwards ease-in;
+	-webkit-animation: slideOutLeft 1s forwards ease-in;
+	animation: slideOutLeft 1s forwards ease-in;
 }
 
 .fxSnapIn .navInNext {
 	z-index: 1001;
 	opacity: 1;
-	-webkit-animation: slideFromRightFast 0.5s forwards cubic-bezier(0.7, 0, 0.3, 1);
-	animation: slideFromRightFast 0.5s forwards cubic-bezier(0.7, 0, 0.3, 1);
+	-webkit-animation: slideFromRightFast 1s forwards cubic-bezier(0.7, 0, 0.3, 1);
+	animation: slideFromRightFast 1s forwards cubic-bezier(0.7, 0, 0.3, 1);
 }
 
 .fxSnapIn .navOutPrev {
@@ -504,7 +506,7 @@
 	animation: slideFromLeftFast 0.5s forwards cubic-bezier(0.7, 0, 0.3, 1);
 }
 
-.fxSnapIn li::after {
+.fxSnapIn div.slide::after {
 	content: '';
 	position: absolute;
 	top: 0;

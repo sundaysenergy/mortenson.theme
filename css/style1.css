@@ -20,19 +20,19 @@
     height: 100%;
     top: 0px;
     left: 33%;
-    z-index: 0;
+    /*z-index: 0;*/
 }
 div.project-info {
   display: table;
   width: 33%;
   height: 100%;
-  position: absolute;
+  position: relative;
   top: 0px;
   left: 0;
   background-size: cover;
   background-position: 50% 50%;
   background-repeat: none;
-  z-index: 0;
+  /*z-index: 0;*/
 }
 
 div.project-info div.inner {
@@ -58,16 +58,17 @@ div.project-info div.inner {
 }
 div.project-testimonial,
 div.project-awards {
+  background: black;
   display: table;
   width: 33%;
   height: 100%;
-  position: absolute;
+  position: relative;
   top: 0px;
   left: 66%;
-  background-size: cover;
+/*  background-size: cover;
   background-position: 50% 50%;
   background-repeat: none;
-  z-index: 0;
+  z-index: 0;*/
 }
 #slideshow div.project-testimonial div.inner {
   display: table-cell;
@@ -271,6 +272,30 @@ div.project-awards {
   to {
     -webkit-transform: translateY(0);
   }
+}
+
+#slideshow div.slide {
+  height: 100%;
+}
+
+#slideshow div.slide .project-info,
+#slideshow div.slide .project-testimonial,
+#slideshow div.slide .cb-slideshow {
+  z-index: 0;
+  background: black;
+}
+
+#slideshow div.current .project-info,
+#slideshow div.current .project-testimonial,
+#slideshow div.current .cb-slideshow {
+  /*opacity: 1;*/
+  z-index: 1000;
+}
+
+#slideshow div.navInNext .project-info,
+#slideshow div.navInNext .project-testimonial,
+#slideshow div.navInNext .cb-slideshow {
+  z-index: 1001;
 }
 
 @media screen and (max-width: 1140px) {

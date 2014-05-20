@@ -13,6 +13,10 @@ $(document).ready () ->
 
   sec_per_slide = 5
 
+  slide = true
+  $slide = [$('div#slideshow div#sam'), $('div#slideshow div#rob')]
+  template = Hogan.compile($('#slideshow-template').html())
+  $('#slideshow').css('height', window.innerHeight+'px')
   anime_by_size = (size) ->
     switch size
       when 1 then 'imageAnimationOne'
@@ -44,11 +48,11 @@ $(document).ready () ->
         index = 0
         item = next_item()
     unless item.testimonial
-      console.log 'skiping ' + item.name
+      # console.log 'skiping ' + item.name
       index = index + 1
       item = next_item()
-    unless item.images
-      console.log 'skipping ' + item.name
+    unless item.images and item.images.length < 10
+      # console.log 'skipping ' + item.name
       index = index + 1
       item = next_item()
     images_count = item.images.length
@@ -72,18 +76,43 @@ $(document).ready () ->
     index = index + 1
     return item
 
+  remove_transition_anim = () ->
+    if slide
+      # $slide[0].html('')
+      $slide[0].removeClass 'navOutNext current'
+      $slide[1].addClass 'current'
+      $slide[1].removeClass 'navInNext'
+    else
+      # $slide[1].html('')
+      $slide[1].removeClass 'navOutNext current'
+      $slide[0].removeClass 'navInNext'
+      $slide[0].addClass 'current'
+
+
   new_slide = () ->
     console.log 'Generate slide ' + index
     item = next_item()
-    console.log item
-    $('div#slideshow div.active').html(template.render(item))
-    #$('div#slideshow div.next').html(template.render(next_item()))
+    if slide # make slide 0 current.
+      slide = false
+      $slide[0].html(template.render(item))
+      $slide[0].addClass 'navInNext'
+      $slide[1].addClass 'navOutNext'
+    else
+      slide = true
+      $slide[1].html(template.render(item))
+      $slide[1].addClass 'navInNext'
+      $slide[0].addClass 'navOutNext'
 
-    setTimeout new_slide, item.images_duration * 1000
+    setTimeout remove_transition_anim, 3000
+
+    # console.log item
+    #$('div#slideshow div.next').html(template.render(next_item()))
+    if index < 1000
+      setTimeout new_slide, 6000 #item.images_duration * 1000
     # console.log item
     return
 
-  template = Hogan.compile($('#slideshow-template').html())
+
 
   # START THE PROCESS
   update();
