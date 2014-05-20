@@ -110,18 +110,7 @@ $(document).ready(function() {
     var item;
     console.log('Generate slide ' + index);
     item = next_item();
-    if (slide) {
-      slide = false;
-      $slide[0].html(template.render(item));
-      $slide[0].addClass('navInNext');
-      $slide[1].addClass('navOutNext');
-    } else {
-      slide = true;
-      $slide[1].html(template.render(item));
-      $slide[1].addClass('navInNext');
-      $slide[0].addClass('navOutNext');
-    }
-    setTimeout(remove_transition_anim, 3000);
+    $slide[0].html(template.render(item));
     if (index < 1000) {
       setTimeout(new_slide, 6000);
     }

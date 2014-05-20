@@ -62,7 +62,7 @@ div.project-awards {
   display: table;
   width: 33%;
   height: 100%;
-  position: relative;
+  position: absolute;
   top: 0px;
   left: 66%;
 /*  background-size: cover;

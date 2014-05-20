@@ -92,18 +92,19 @@ $(document).ready () ->
   new_slide = () ->
     console.log 'Generate slide ' + index
     item = next_item()
-    if slide # make slide 0 current.
-      slide = false
-      $slide[0].html(template.render(item))
-      $slide[0].addClass 'navInNext'
-      $slide[1].addClass 'navOutNext'
-    else
-      slide = true
-      $slide[1].html(template.render(item))
-      $slide[1].addClass 'navInNext'
-      $slide[0].addClass 'navOutNext'
+    # if slide # make slide 0 current.
+    #   slide = false
+    #   $slide[0].html(template.render(item))
+    #   $slide[0].addClass 'navInNext'
+    #   $slide[1].addClass 'navOutNext'
+    # else
+    #   slide = true
+    #   $slide[1].html(template.render(item))
+    #   $slide[1].addClass 'navInNext'
+    #   $slide[0].addClass 'navOutNext'
+    # setTimeout remove_transition_anim, 3000
 
-    setTimeout remove_transition_anim, 3000
+    $slide[0].html(template.render(item))
 
     # console.log item
     #$('div#slideshow div.next').html(template.render(next_item()))

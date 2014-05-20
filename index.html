@@ -7,7 +7,7 @@
   <head>
       <meta charset="UTF-8" />
       <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-      <title>Fullscreen Background Image Slideshow with CSS3</title>
+      <title>Slide Picker</title>
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
       <meta name="description" content="Fullscreen Background Image Slideshow with CSS3 - A Css-only fullscreen background image slideshow" />
       <meta name="keywords" content="css3, css-only, fullscreen, background, slideshow, images, content" />
@@ -15,22 +15,29 @@
       <link rel="shortcut icon" href="../favicon.ico">
       <!-- <link rel="stylesheet" type="text/css" href="http://www.mortenson.com/Assets/css/main.min.css" /> -->
       <!-- <link rel="stylesheet" type="text/css" href="css/demo.css" /> -->
-      <!-- <link rel="stylesheet" type="text/css" href="css/style1.css" /> -->
+      <link rel="stylesheet" type="text/css" href="css/style.css" />
       <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css" media="screen">
       <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/modernizr/2.7.1/modernizr.min.js"></script>
     <link href="//netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css" rel="stylesheet">
   </head>
   <body id="page">
-    <div id="slideshow">
-      <div class="slide active">
-      </div>
-      <div class="slide next">
+    <div class="container-fluid">
+      <h1>Slide Picker</h1>
+      <div id="slideshow">
+        <div class="slide active">
+        </div>
       </div>
     </div>
+
     <script id="slideshow-template" type="text/x-mustache-template">
       <!-- // LISTING OF IMAGES -->
       <div class="row" id="list">
-        <input type="text" class="search" style="margin-left: 400px;"/>
+        <div class="row">
+          <div class="form-group col-sm-4 col-sm-offset-4">
+            <label for="searchFilter">Search</label>
+            <input type="text" class="form-control search" id="searchFilter" placeholder="solar" />
+          </div>
+        </div>
         <ul class="cb-slideshow list">
           {{#projects}}
             <li class="col-6 col-sm-4 col-lg-2" style="height:205px;">
