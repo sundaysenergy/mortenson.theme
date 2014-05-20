@@ -11,10 +11,18 @@ $(document).ready(function() {
   endpoint = '/projects-full.json';
   update = function() {
     return $.getJSON(endpoint, function(new_data) {
+      var memberList, options, plugins;
       if (new_data) {
-        return $('div#slideshow div.active').html(template.render({
+        $('div#slideshow div.active').html(template.render({
           projects: new_data
         }));
+        plugins = [ListFuzzySearch()];
+        options = {
+          valueNames: ['name'],
+          page: 300,
+          plugins: plugins
+        };
+        return memberList = new List('list', options);
       } else {
         return console.log('NO DATA');
       }

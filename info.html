@@ -33,15 +33,13 @@
         <input type="text" class="search" style="margin-left: 400px;"/>
         <ul class="cb-slideshow list">
           {{#projects}}
-            <li class="col-6 col-sm-4 col-lg-2" style="height:205px;">
+            <li class="col-6 col-sm-4 col-lg-2" style="">
               <p class="name">{{name}}</p>
               <img src="{{img}}" width="200px" height="200px" class="img-thumbnail" />
-              <a href="#" class="remove" title="REMOVE">
-                <i class="icon-ban-circle"></i>
-              </a>
-              <a href="#" class="add" title="ADD">
-                <i class="icon-thumbs-up"></i>
-              </a>
+              <p class="location">{{location}}</p>
+              <p class="result">{{&result}}</p>
+              <p class="quote">{{testimonial}}</p>
+              <p class="source">{{testimonial_source}}</p>
             </li>
           {{/projects}}
 

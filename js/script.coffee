@@ -13,6 +13,12 @@ $(document).ready () ->
     $.getJSON endpoint, (new_data) ->
       if (new_data)
         $('div#slideshow div.active').html(template.render({projects: new_data}))
+        plugins = [ListFuzzySearch()]
+        options =
+          valueNames: ['name']
+          page: 300
+          plugins: plugins
+        memberList = new List('list', options)
       else
         console.log 'NO DATA'
 

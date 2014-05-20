@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+		<meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <title>Slideshow</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="Slideshow with jmpress.js" />
+        <meta name="keywords" content="jmpress, slideshow, container, plugin, jquery, css3" />
+        <link rel="shortcut icon" href="../favicon.ico">
+		<link href='http://fonts.googleapis.com/css?family=Open+Sans+Condensed:700,300,300italic' rel='stylesheet' type='text/css'>
+        <link rel="stylesheet" type="text/css" href="css/demo.css" />
+        <link rel="stylesheet" type="text/css" href="css/style_alt.css" />
+		<!--[if lt IE 9]>
+		<link rel="stylesheet" type="text/css" href="css/style_ie.css" />
+		<![endif]-->
+		<!-- jQuery -->
+		<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+		<!-- jmpress plugin -->
+		<script type="text/javascript" src="js/jmpress.min.js"></script>
+		<!-- jmslideshow plugin : extends the jmpress plugin -->
+		<script type="text/javascript" src="js/jquery.jmslideshow.js"></script>
+		<script type="text/javascript" src="js/modernizr.custom.48780.js"></script>
+		<noscript>
+			<style>
+			.step {
+				width: 100%;
+				position: relative;
+			}
+			.step:not(.active) {
+				opacity: 1;
+				filter: alpha(opacity=99);
+				-ms-filter: "progid:DXImageTransform.Microsoft.Alpha(opacity=99)";
+			}
+			.step:not(.active) a.jms-link{
+				opacity: 1;
+				margin-top: 40px;
+			}
+			</style>
+		</noscript>
+    </head>
+    <body>
+        <div class="container">
+
+
+			<section id="jms-slideshow" class="jms-slideshow">
+				<div class="step" data-color="color-1" data-x="2000" data-y="1000" data-z="3000" data-rotate="-20">
+					<div class="jms-content">
+            <h3>Over 800 New Energy-Related Jobs Created</h3>
+						<p>Alamo IV Solar Project</p>
+            <p>San Antonio, TX</p>
+					</div>
+					<img src="http://www.mortenson.com//~/media/images/mortenson/projects/solar/alamo%20iv%20solar/alamo%20iv%20project%20profile%20image.jpg" />
+				</div>
+				<div class="step" data-color="color-2" data-x="1000" data-z="2000" data-rotate="20">
+					<div class="jms-content">
+						<h3>Generates Electricity for More Than 6,500 Households</h3>
+						<p>Alamosa Solar Project</p>
+						<a class="jms-link" href="#">Alamosa, CO</a>
+					</div>
+					<img src="http://www.mortenson.com//~/media/images/mortenson/projects/solar/alamosa%20solar%20generating%20project/alamosa-solar-generating-project-1.jpg" />
+				</div>
+				<div class="step" data-color="color-3" data-x="2000" data-y="1500" data-z="1000" data-rotate="20">
+					<div class="jms-content">
+						<h3>Allstate Insurance Data Center</h3>
+						<p>70% more efficient than previous data center</p>
+						<a class="jms-link" href="#">Rochelle, IL</a>
+					</div>
+					<img src="http://www.mortenson.com//~/media/images/mortenson/projects/chicago/allstate%20insurance%20data%20center/allstate-insurance-data-center-1.jpg" />
+				</div>
+				<div class="step" data-color="color-4" data-x="3000" data-y="2000">
+					<div class="jms-content">
+						<h3>American Academy of Neurology</h3>
+						<p>New space supports growing network of 26,000 members</p>
+						<a class="jms-link" href="#">Minneapolis, MN</a>
+					</div>
+					<img src="http://www.mortenson.com//~/media/images/mortenson/projects/minneapolis/american%20academy%20of%20neurology/10030035-03-american-academy-neurology.jpg" />
+				</div>
+				<div class="step" data-color="color-5" data-x="4000" data-y="1500" data-z="1000" data-rotate="-20">
+					<div class="jms-content">
+						<h3>Eisenhower Public Library</h3>
+						<p>The team recycled over 75% of the construction waste produced by this project, this equates to diverting over 150 tons of materials from landfills.</p>
+					</div>
+					<img src="http://www.mortenson.com//~/media/images/mortenson/projects/chicago/eisenhower%20public%20library/eisenhower-public-library-1.jpg" />
+				</div>
+			</section>
+        </div>
+
+		<script type="text/javascript">
+			$(function() {
+
+				$( '#jms-slideshow' ).jmslideshow({autoplay: true, interval: 5000});
+
+			});
+		</script>
+    </body>
+</html>
