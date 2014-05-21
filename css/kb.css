@@ -1,0 +1,132 @@
+/*******************************************/
+/* Animations */
+/*******************************************/
+
+@-webkit-keyframes fadein {
+  0%   { opacity: 0; }
+  100% { opacity: 1; }
+}
+
+@-webkit-keyframes fadeout {
+  0%   { opacity: 1; }
+  100% { opacity: 0; }
+}
+
+@-webkit-keyframes rotate_in_right {
+  0%   { -webkit-transform:rotate(-60deg);}
+  100% { -webkit-transform:rotate(0deg);} 
+}
+
+@-webkit-keyframes unrotate_in_right {
+  0%   { -webkit-transform:rotate(0deg);}
+  100% { -webkit-transform:rotate(-60deg); }
+}
+
+@-webkit-keyframes slidein {
+  0%   {
+    margin-left: 111%;
+    width: 300%;
+  }
+
+  100% {
+    margin-left: 10%;
+    width: 100%;
+  }
+}
+
+/*******************************************/
+/* Animation Classes */
+/*******************************************/
+
+.fadein {
+  -webkit-animation-name: fadein;
+  -webkit-animation-duration: 2s;
+  opacity: 1;
+}
+
+.fadeout {
+  -webkit-animation-name: fadeout;
+  -webkit-animation-duration: 2s;
+  opacity: 0;
+}
+
+.rotate_in_right {
+  -webkit-animation-name: rotate_in_right;
+  -webkit-animation-duration: 2s;
+}
+
+.unrotate_in_right {
+  -webkit-animation-name: unrotate_in_right;
+  -webkit-animation-duration: 2s;
+}
+
+.slidein {
+  -webkit-animation-duration: 3s;
+  -webkit-animation-name: slidein;
+}
+
+/*******************************************/
+/* Other Styles */
+/*******************************************/
+* {
+  z-index: 1;
+  -webkit-transition: all ease-in-out;
+}
+
+.one {
+  position: fixed;
+  top:0;
+  bottom: 0;
+  left: 0;
+  min-width: 100%;
+  min-height: 100%;
+  z-index: -1;
+}
+
+div {
+  background: red;
+  height: 600px;
+  width: 100%;
+  margin-left: 10%;
+  -webkit-transform: skewX(25deg);  /* e.g. skewX(25deg) */
+  -webkit-animation-name: slidein;
+  -webkit-animation-duration: 6s;
+}
+
+h1,h2,h3 { position: relative; }
+
+h1 { 
+  font-size: 5em;
+  color: white;
+  top: -400px;
+  margin-left: 10%;
+  -webkit-animation-name: slidein;
+  -webkit-animation-duration: 12s;
+  padding-left: 5%;
+}
+
+h2 { 
+  font-size: 3em;
+  color: white;
+}
+
+h2.uno { 
+  top: -444px;
+  margin-left: 50%;
+  -webkit-animation-name: rotate_in_right;
+  -webkit-animation-duration: 8s;
+}
+
+h2.dos { 
+  top: -600px;
+  margin-left: 50%;
+  -webkit-animation-name: rotate_in_right;
+  -webkit-animation-duration: 12s;
+}
+
+h3.fadein {
+  top:-1000px;
+  font-size: 8em;
+  color: yellow;
+  -webkit-animation-duration: 12s;
+}
